@@ -1,0 +1,80 @@
+{
+  "manifest_version": 1.0,
+  "id": "vsts-work-item-one-click-child-links",
+  "name": "Clark One Click Child Links",
+  "version": "0.13.0",
+  "publisher": "ClarkEngineeringProductivityTeam",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "scopes": [
+    "vso.work",
+    "vso.work_write"
+  ],
+  "tags": [
+    "Tasks"
+  ],
+  "description": "Add Child-Links from pre-defined templates with a single click.",
+  "categories": [
+    "Plan and track"
+  ],
+  "icons": {
+    "default": "images/one-click.png"
+  },
+  "screenshots": [
+    {
+      "path": "images/screen01.png"
+    },
+    {
+      "path": "images/screen02.png"
+    },
+    {
+      "path": "images/screen03.png"
+    }
+  ],
+  "content": {
+    "details": {
+      "path": "README.md"
+    }
+  },
+  "files": [
+    {
+      "path": "images",
+      "addressable": true
+    },
+    {
+      "path": "toolbar.html",
+      "addressable": true
+    },
+    {
+      "path": "scripts/app.js",
+      "addressable": true
+    },
+    {
+      "path": "lib/VSS.SDK.min.js",
+      "addressable": true
+    }
+  ],
+  "contributions": [
+    {
+      "id": "create-child-task-work-item-button",
+      "type": "ms.vss-web.action",
+      "description": "1-Click Child-Links",
+      "targets": [
+        "ms.vss-work-web.work-item-toolbar-menu",
+        "ms.vss-work-web.backlog-item-menu",
+        "ms.vss-work-web.work-item-context-menu"
+      ],
+      "properties": {
+        "text": " 1-Click Child-Links",
+        "title": "1-Click Child-Links",
+        "toolbarText": "1-Click Child-Links",
+        "icon": "images/one-click16.png",
+        "uri": "toolbar.html",
+        "registeredObjectId": "create-child-task-work-item-button"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: one-click-child-links-script-repository
+  title: One Click Child Links Extension
+  description: Azure DevOps Extension for boards that allows users to create and apply templates for creating work item child tasks based on properties of the work item.
+  links:
+    - url: https://github.com/figueiredorui/1-click-child-links
+      title: Upstream Repository Github
+    - url: https://tfs.clarkinc.biz/_gallery/items?itemName=ClarkEngineeringProductivityTeam.vsts-work-item-one-click-child-links&targetId=90f3d81d-07fe-412d-b2e4-67b7ce7b93dc&utm_source=vstsproduct&utm_medium=ExtHubManageList
+      title: Extension Marketplace Page
+  annotations:
+    dev.azure.com/project-repo: Azure DevOps Extensions/one-click-child-links
+spec:
+  type: script-repository
+  owner: group:default/engineering-productivity-request-team
+  lifecycle: production
+---
