@@ -36,7 +36,7 @@ jobs:
             inputs:
               connectedServiceName: 'Marketplace test ahalpin'
               fileType: vsix
-              vsixFile: $(Build.ArtifactStagingDirectory)/one-click-child-links/ClarkAssociates.vsts-work-item-one-click-child-links-0.13.1.vsix
+              vsixFile: $(Build.ArtifactStagingDirectory)/one-click-child-links/*.vsix
 
           - task: ms-devlabs.vsts-developer-tools-build-tasks.is-valid-extension-agent-build-task.IsAzureDevOpsExtensionValid@4
             displayName: 'Check Marketplace validation status: vsts-work-item-one-click-child-links'
