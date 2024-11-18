@@ -1,0 +1,46 @@
+parameters:
+  - name: Publish.Artifact
+    type: boolean
+
+jobs:
+  - job:
+    pool: Linux
+    displayName: Build
+    steps:
+      - template: /builds/steps/packages/yarnTasks.yml@common
+        parameters:
+          Yarn.ProjectDirectory: $(Build.SourcesDirectory)/src
+          Yarn.Actions:
+            - build
+            - package
+
+      - ${{ if parameters['Publish.Artifact'] }}:
+          - task: CopyFiles@2
+            displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)/one-click-child-links'
+            inputs:
+              SourceFolder: $(Build.SourcesDirectory)/dist
+              Contents: '*.vsix'
+              TargetFolder: $(Build.ArtifactStagingDirectory)/one-click-child-links
+
+          - task: PublishBuildArtifacts@1
+            displayName: 'Publish Artifact: one-click-child-links'
+            inputs:
+              PathToPublish: $(Build.ArtifactStagingDirectory)/one-click-child-links
+              ArtifactName: one-click-child-links
+
+          - task: ms-devlabs.vsts-developer-tools-build-tasks.tfx-installer-build-task.TfxInstaller@4
+            displayName: 'Use Node CLI for Azure DevOps (tfx-cli): v0.x'
+
+          - task: ms-devlabs.vsts-developer-tools-build-tasks.publish-extension-build-task.PublishAzureDevOpsExtension@4
+            displayName: 'Publish Extension'
+            inputs:
+              connectedServiceName: 'Marketplace test ahalpin'
+              fileType: vsix
+              vsixFile: $(Build.ArtifactStagingDirectory)/one-click-child-links/ClarkAssociates.vsts-work-item-one-click-child-links-0.13.1.vsix
+
+          - task: ms-devlabs.vsts-developer-tools-build-tasks.is-valid-extension-agent-build-task.IsAzureDevOpsExtensionValid@4
+            displayName: 'Check Marketplace validation status: vsts-work-item-one-click-child-links'
+            inputs:
+              connectedServiceName: 'Marketplace test ahalpin'
+              publisherId: ClarkAssociates
+              extensionId: 'vsts-work-item-one-click-child-links'

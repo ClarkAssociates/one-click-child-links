@@ -1,0 +1,21 @@
+trigger:
+  batch: true
+  branches:
+    include:
+      - main
+  paths:
+    exclude:
+      - README.md
+      - .local/*
+      - .vscode/*
+      - docs/*
+
+name: $(date:yyyyMMdd)$(rev:.rr)-$(Build.SourceBranchName)
+
+extends:
+  template: /.pipelines/templates/resources.yml
+  parameters:
+    stages:
+      - template: /.pipelines/templates/stages/build.yml
+        parameters:
+          Publish.Artifact: true
