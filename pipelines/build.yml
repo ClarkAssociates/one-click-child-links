@@ -13,9 +13,9 @@ trigger:
 name: $(date:yyyyMMdd)$(rev:.rr)-$(Build.SourceBranchName)
 
 extends:
-  template: /.pipelines/templates/resources.yml
+  template: /pipelines/templates/resources.yml
   parameters:
     stages:
-      - template: /.pipelines/templates/stages/build.yml
+      - template: /pipelines/templates/stages/build.yml
         parameters:
           Publish.Artifact: true
