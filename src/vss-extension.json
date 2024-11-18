@@ -18,7 +18,7 @@
   ],
   "description": "Add Child-Links from pre-defined templates with a single click.",
   "categories": [
-    "Plan and track"
+    "Azure Boards"
   ],
   "icons": {
     "default": "images/one-click.png"
@@ -39,6 +39,25 @@
       "path": "README.md"
     }
   },
+  "links": {
+    "repository": {
+      "uri": "https://github.com/Microsoft/azure-devops-extension-tasks"
+    },
+    "issues": {
+      "uri": "https://github.com/Microsoft/azure-devops-extension-tasks/issues"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/Microsoft/azure-devops-extension-tasks"
+  },
+  "badges": [
+    {
+      "href": "https://tfs.clarkinc.biz/DefaultCollection/Azure%20DevOps%20Extensions/_apis/build/status%2FGitHub%20one-click-child-links%20-%20CI?repoName=ClarkAssociates%2Fone-click-child-links&branchName=main",
+      "uri": "https://tfs.clarkinc.biz/DefaultCollection/Azure%20DevOps%20Extensions/_apis/build/status%2FGitHub%20one-click-child-links%20-%20CI?repoName=ClarkAssociates%2Fone-click-child-links&branchName=main",
+      "description": "Build"
+    }
+  ],
   "files": [
     {
       "path": "images",

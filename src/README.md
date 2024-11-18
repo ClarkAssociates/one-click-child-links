@@ -106,13 +106,4 @@ In order to debug the extension using Visual Studio or Browser Developer Tools a
     "baseUri": "https://localhost:5501",
 
 }
-```
-
-## Contributors ##
-
-<a href="https://github.com/jdshkolnik"><img src="https://avatars.githubusercontent.com/u/2047520?v=3" title="jdshkolnik" width="80" height="80"></a>
-<a href="https://github.com/thesobercoder"><img src="https://avatars.githubusercontent.com/u/1915249?v=3" title="thesobercoder" width="80" height="80"></a>
-
-## Credits ##
-
-Clone from https://github.com/cschleiden/vsts-extension-ts-seed-simple
+```[![Build Status](https://tfs.clarkinc.biz/DefaultCollection/Azure%20DevOps%20Extensions/_apis/build/status%2FGitHub%20one-click-child-links%20-%20CI?repoName=ClarkAssociates%2Fone-click-child-links&branchName=main)](https://tfs.clarkinc.biz/DefaultCollection/Azure%20DevOps%20Extensions/_build/latest?definitionId=3336&repoName=ClarkAssociates%2Fone-click-child-links&branchName=main)
