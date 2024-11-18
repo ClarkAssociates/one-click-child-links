@@ -3,7 +3,7 @@
   "id": "vsts-work-item-one-click-child-links",
   "name": "Clark One Click Child Links",
   "version": "0.13.0",
-  "publisher": "ClarkEngineeringProductivityTeam",
+  "publisher": "ClarkAssociates",
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
