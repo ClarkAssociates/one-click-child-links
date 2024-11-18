@@ -41,15 +41,15 @@
   },
   "links": {
     "repository": {
-      "uri": "https://github.com/Microsoft/azure-devops-extension-tasks"
+      "uri": "https://github.com/ClarkAssociates/one-click-child-links"
     },
     "issues": {
-      "uri": "https://github.com/Microsoft/azure-devops-extension-tasks/issues"
+      "uri": "https://github.com/ClarkAssociates/one-click-child-links/issues"
     }
   },
   "repository": {
     "type": "git",
-    "uri": "https://github.com/Microsoft/azure-devops-extension-tasks"
+    "uri": "hhttps://github.com/ClarkAssociates/one-click-child-links"
   },
   "badges": [
     {

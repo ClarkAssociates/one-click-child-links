@@ -28,17 +28,17 @@ jobs:
               PathToPublish: $(Build.ArtifactStagingDirectory)/one-click-child-links
               ArtifactName: one-click-child-links
 
-          - task: ms-devlabs.vsts-developer-tools-build-tasks.tfx-installer-build-task.TfxInstaller@4
+          - task: TfxInstaller@4
             displayName: 'Use Node CLI for Azure DevOps (tfx-cli): v0.x'
 
-          - task: ms-devlabs.vsts-developer-tools-build-tasks.publish-extension-build-task.PublishAzureDevOpsExtension@4
+          - task: PublishAzureDevOpsExtension@4
             displayName: 'Publish Extension'
             inputs:
               connectedServiceName: 'Marketplace test ahalpin'
               fileType: vsix
               vsixFile: $(Build.ArtifactStagingDirectory)/one-click-child-links/*.vsix
 
-          - task: ms-devlabs.vsts-developer-tools-build-tasks.is-valid-extension-agent-build-task.IsAzureDevOpsExtensionValid@4
+          - task: IsAzureDevOpsExtensionValid@4
             displayName: 'Check Marketplace validation status: vsts-work-item-one-click-child-links'
             inputs:
               connectedServiceName: 'Marketplace test ahalpin'
