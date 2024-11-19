@@ -62,7 +62,7 @@ Basic `grunt` tasks are defined:
 Note: To avoid `tfx` prompting for your token when publishing, login in beforehand using `tfx login` and the service uri of ` https://marketplace.visualstudio.com`.
 
 ### Debugging your extension ###
-In order to debug the extension using Visual Studio or Browser Developer Tools and speed up the development without redeploying extension each time you change source code, you need change manifest adding baseUri property:
+In order to debug the extension using Visual Studio or Browser Developer Tools and speed up the development without redeploying extension each time you change source code, you need to add the `baseUri` property to the `vss-extension.json file` as shown below:
 
 ``` json
 {
