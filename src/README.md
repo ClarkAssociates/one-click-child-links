@@ -43,42 +43,6 @@ You should now have children associated with the open work item.
 
 <img src="src/img/screen03.png" alt="Done"/>
 
-## Release notes ##
-
-* v0.11.3
-  * Fixed issue #62
-  * Fixed issue #49
-
-
-* v0.11.0
-  * Fixed issue #50
-  * Fixed issue #48
-  * Fixed issue #46
-  * Fixed issue #45
-  * Fixed issue #41
-  * Fixed issue #37
-  * Enhancement issue #49
-
-* v0.10.0
-  * Template applicability criteria can be defined using complex JSON objects in the template description.
-
-* v0.8.0
-  * Template sets can now be created on keywords in titles on top of Work Item Types
-  * Inherit values from parent work item fields (<a href="https://github.com/figueiredorui/1-click-child-links/wiki/Inherit-field-values-from-parent-work-item" target="_blank">wiki</a>)
-  * Copy field value from parent (<a href="https://github.com/figueiredorui/1-click-child-links/wiki/Copy-field-value-from-parent" target="_blank">wiki</a>)
-
-* v0.6.0
-  * 1-Click Child-Links option available when selecting multiple work items
-
-* v0.5.0
-  * 1-Click Child-Links option available on Card and Backlog context menu.
-
-* v0.4.0
-  * Identifier to distinguish templates sets to be added in a single click (<a href="https://github.com/figueiredorui/1-click-child-links/wiki/Group-templates-with-identifier" target="_blank">wiki</a>)
-
-* v0.3.0
-  * Enforce correct order when adding child links to work item
-
 ## Usage ##
 
 1. Clone the repository
@@ -106,4 +70,4 @@ In order to debug the extension using Visual Studio or Browser Developer Tools a
     "baseUri": "https://localhost:5501",
 
 }
-```[![Build Status](https://tfs.clarkinc.biz/DefaultCollection/Azure%20DevOps%20Extensions/_apis/build/status%2FGitHub%20one-click-child-links%20-%20CI?repoName=ClarkAssociates%2Fone-click-child-links&branchName=main)](https://tfs.clarkinc.biz/DefaultCollection/Azure%20DevOps%20Extensions/_build/latest?definitionId=3336&repoName=ClarkAssociates%2Fone-click-child-links&branchName=main)
+```

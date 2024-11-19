@@ -4,6 +4,7 @@
   "name": "Clark One Click Child Links",
   "version": "0.13.0",
   "publisher": "ClarkAssociates",
+  "public": true,
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
