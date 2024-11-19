@@ -6,7 +6,7 @@ stages:
   - stage: Build
     displayName: Build
     jobs:
-      - template: /pipelines/templates/jobs/build.yml
+      - template: /.pipelines/templates/jobs/build.yml
         parameters: ${{ parameters }}
 
-      - template: /pipelines/templates/jobs/security.yml
+      - template: /.pipelines/templates/jobs/security.yml
