@@ -1,0 +1,12 @@
+parameters:
+  - name: Publish.Artifact
+    type: boolean
+
+stages:
+  - stage: Build
+    displayName: Build
+    jobs:
+      - template: /.pipelines/templates/jobs/build.yml
+        parameters: ${{ parameters }}
+
+      - template: /.pipelines/templates/jobs/security.yml

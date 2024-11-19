@@ -1,0 +1,7 @@
+jobs:
+  - template: /staticAnalysis/jobs/dependencyChecker.yml@common
+    parameters:
+      job: dependencyChecker
+      displayName: Dependency Checker
+      ScanPattern:
+        - '**/yarn.lock'

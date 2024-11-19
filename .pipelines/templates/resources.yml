@@ -1,0 +1,22 @@
+parameters:
+  - name: jobs
+    type: jobList
+    default: []
+  - name: stages
+    type: stageList
+    default: []
+
+resources:
+  repositories:
+    - repository: common
+      type: git
+      name: Tools/Pipelines.Common
+      ref: refs/heads/master
+
+stages:
+  - ${{ if length(parameters['stages']) }}:
+    - ${{ parameters['stages'] }}
+
+  - ${{ if length(parameters['jobs']) }}:
+    - stage:
+      jobs: ${{ parameters.jobs }}

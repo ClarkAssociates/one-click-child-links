@@ -43,42 +43,6 @@ You should now have children associated with the open work item.
 
 <img src="src/img/screen03.png" alt="Done"/>
 
-## Release notes ##
-
-* v0.11.3
-  * Fixed issue #62
-  * Fixed issue #49
-
-
-* v0.11.0
-  * Fixed issue #50
-  * Fixed issue #48
-  * Fixed issue #46
-  * Fixed issue #45
-  * Fixed issue #41
-  * Fixed issue #37
-  * Enhancement issue #49
-
-* v0.10.0
-  * Template applicability criteria can be defined using complex JSON objects in the template description.
-
-* v0.8.0
-  * Template sets can now be created on keywords in titles on top of Work Item Types
-  * Inherit values from parent work item fields (<a href="https://github.com/figueiredorui/1-click-child-links/wiki/Inherit-field-values-from-parent-work-item" target="_blank">wiki</a>)
-  * Copy field value from parent (<a href="https://github.com/figueiredorui/1-click-child-links/wiki/Copy-field-value-from-parent" target="_blank">wiki</a>)
-
-* v0.6.0
-  * 1-Click Child-Links option available when selecting multiple work items
-
-* v0.5.0
-  * 1-Click Child-Links option available on Card and Backlog context menu.
-
-* v0.4.0
-  * Identifier to distinguish templates sets to be added in a single click (<a href="https://github.com/figueiredorui/1-click-child-links/wiki/Group-templates-with-identifier" target="_blank">wiki</a>)
-
-* v0.3.0
-  * Enforce correct order when adding child links to work item
-
 ## Usage ##
 
 1. Clone the repository
@@ -98,7 +62,7 @@ Basic `grunt` tasks are defined:
 Note: To avoid `tfx` prompting for your token when publishing, login in beforehand using `tfx login` and the service uri of ` https://marketplace.visualstudio.com`.
 
 ### Debugging your extension ###
-In order to debug the extension using Visual Studio or Browser Developer Tools and speed up the development without redeploying extension each time you change source code, you need change manifest adding baseUri property:
+In order to debug the extension using Visual Studio or Browser Developer Tools and speed up the development without redeploying extension each time you change source code, you need to add the `baseUri` property to the `vss-extension.json file` as shown below:
 
 ``` json
 {
@@ -107,12 +71,3 @@ In order to debug the extension using Visual Studio or Browser Developer Tools a
 
 }
 ```
-
-## Contributors ##
-
-<a href="https://github.com/jdshkolnik"><img src="https://avatars.githubusercontent.com/u/2047520?v=3" title="jdshkolnik" width="80" height="80"></a>
-<a href="https://github.com/thesobercoder"><img src="https://avatars.githubusercontent.com/u/1915249?v=3" title="thesobercoder" width="80" height="80"></a>
-
-## Credits ##
-
-Clone from https://github.com/cschleiden/vsts-extension-ts-seed-simple
