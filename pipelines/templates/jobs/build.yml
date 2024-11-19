@@ -34,13 +34,13 @@ jobs:
           - task: PublishAzureDevOpsExtension@4
             displayName: 'Publish Extension'
             inputs:
-              connectedServiceName: 'Marketplace test ahalpin'
+              connectedServiceName: 'Azure Extension Marketplace'
               fileType: vsix
               vsixFile: $(Build.ArtifactStagingDirectory)/one-click-child-links/*.vsix
 
           - task: IsAzureDevOpsExtensionValid@4
             displayName: 'Check Marketplace validation status: vsts-work-item-one-click-child-links'
             inputs:
-              connectedServiceName: 'Marketplace test ahalpin'
+              connectedServiceName: 'Azure Extension Marketplace'
               publisherId: ClarkAssociates
               extensionId: 'vsts-work-item-one-click-child-links'

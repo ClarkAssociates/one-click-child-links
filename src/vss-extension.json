@@ -49,12 +49,12 @@
   },
   "repository": {
     "type": "git",
-    "uri": "hhttps://github.com/ClarkAssociates/one-click-child-links"
+    "uri": "https://github.com/ClarkAssociates/one-click-child-links"
   },
   "badges": [
     {
-      "href": "https://tfs.clarkinc.biz/DefaultCollection/Azure%20DevOps%20Extensions/_apis/build/status%2FGitHub%20one-click-child-links%20-%20CI?repoName=ClarkAssociates%2Fone-click-child-links&branchName=main",
-      "uri": "https://tfs.clarkinc.biz/DefaultCollection/Azure%20DevOps%20Extensions/_apis/build/status%2FGitHub%20one-click-child-links%20-%20CI?repoName=ClarkAssociates%2Fone-click-child-links&branchName=main",
+      "href": "https://tfs.clarkinc.biz/DefaultCollection/Azure%20DevOps%20Extensions/_apis/build/status%2FGitHub%20one-click-child-links%20-%20CI?branchName=main",
+      "uri": "https://tfs.clarkinc.biz/DefaultCollection/Azure%20DevOps%20Extensions/_apis/build/status%2FGitHub%20one-click-child-links%20-%20CI?branchName=main",
       "description": "Build"
     }
   ],
