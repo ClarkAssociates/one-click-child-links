@@ -1,0 +1,18 @@
+{
+    "jsc": {
+        "parser": {
+        "syntax": "typescript"
+        },
+        "externalHelpers": true,
+        "loose": false,
+        "target": "es2022",
+        "minify": {
+        "compress": true,
+        "mangle": true
+        }
+    },
+    "minify": true,
+    "module": {
+        "type": "es6"
+    }
+}

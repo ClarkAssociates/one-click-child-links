@@ -1,0 +1,18 @@
+node_modules
+.cache
+*.log
+*.tgz
+!azure-devops-node-api-*.tgz
+**/*.vsix
+**/.taskkey
+.nyc_output
+coverage
+
+# Build outputs
+output
+dist
+
+# Settings
+.vscode/settings.json
+.idea
+.DS_Store

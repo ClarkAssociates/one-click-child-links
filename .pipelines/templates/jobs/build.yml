@@ -12,6 +12,8 @@ jobs:
           Yarn.ProjectDirectory: $(Build.SourcesDirectory)/src
           Yarn.Actions:
             - build
+            - lint
+            - test
             - package
 
       - ${{ if parameters['Publish.Artifact'] }}:

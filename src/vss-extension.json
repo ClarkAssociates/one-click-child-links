@@ -2,9 +2,8 @@
   "manifest_version": 1.0,
   "id": "vsts-work-item-one-click-child-links",
   "name": "Clark One Click Child Links",
-  "version": "0.13.0",
-  "publisher": "ClarkAssociates",
-  "public": true,
+  "version": "1.0.0",
+  "publisher": "ClarkEngineeringProductivityTeam",
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
@@ -19,7 +18,7 @@
   ],
   "description": "Add Child-Links from pre-defined templates with a single click.",
   "categories": [
-    "Azure Boards"
+    "Plan and track"
   ],
   "icons": {
     "default": "images/one-click.png"
@@ -40,25 +39,6 @@
       "path": "README.md"
     }
   },
-  "links": {
-    "repository": {
-      "uri": "https://github.com/ClarkAssociates/one-click-child-links"
-    },
-    "issues": {
-      "uri": "https://github.com/ClarkAssociates/one-click-child-links/issues"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "uri": "https://github.com/ClarkAssociates/one-click-child-links"
-  },
-  "badges": [
-    {
-      "href": "https://tfs.clarkinc.biz/DefaultCollection/Azure%20DevOps%20Extensions/_apis/build/status%2FGitHub%20one-click-child-links%20-%20CI?branchName=main",
-      "uri": "https://tfs.clarkinc.biz/DefaultCollection/Azure%20DevOps%20Extensions/_apis/build/status%2FGitHub%20one-click-child-links%20-%20CI?branchName=main",
-      "description": "Build"
-    }
-  ],
   "files": [
     {
       "path": "images",
@@ -69,11 +49,7 @@
       "addressable": true
     },
     {
-      "path": "scripts/app.js",
-      "addressable": true
-    },
-    {
-      "path": "lib/VSS.SDK.min.js",
+      "path": "app.js",
       "addressable": true
     }
   ],
