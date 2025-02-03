@@ -30,17 +30,20 @@ jobs:
               PathToPublish: $(Build.ArtifactStagingDirectory)/one-click-child-links
               ArtifactName: one-click-child-links
 
-          - task: TfxInstaller@4
-            displayName: 'Use Node CLI for Azure DevOps (tfx-cli): v0.x'
+          - task: TfxInstaller@5
+            displayName: 'Use Node CLI for Azure DevOps'
+            inputs:
+              version: '0.x'
+              checkLatest: true
 
-          - task: PublishAzureDevOpsExtension@4
+          - task: PublishAzureDevOpsExtension@5
             displayName: 'Publish Extension'
             inputs:
               connectedServiceName: 'Azure Extension Marketplace'
               fileType: vsix
               vsixFile: $(Build.ArtifactStagingDirectory)/one-click-child-links/*.vsix
 
-          - task: IsAzureDevOpsExtensionValid@4
+          - task: IsAzureDevOpsExtensionValid@5
             displayName: 'Check Marketplace validation status: vsts-work-item-one-click-child-links'
             inputs:
               connectedServiceName: 'Azure Extension Marketplace'
