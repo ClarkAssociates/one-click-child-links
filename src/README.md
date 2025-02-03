@@ -4,9 +4,7 @@
 
 Azure DevOps offers team-specific work item templating as <a href="https://docs.microsoft.com/en-us/azure/devops/boards/backlogs/work-item-template?view=azure-devops&tabs=browser" target="_blank">core functionality</a> with which you can quickly apply pre-populated values for your team's commonly used fields per work item type.
 
-The child work items created by this extension are based on the hierarchy of work item types defined in the process template (<a href="https://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/agile-process-workflow?view=azure-devops" target="_blank">Agile</a>, <a href="https://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/scrum-process-workflow?view=azure-devops" target="_blank">Scrum</a>, <a href="https://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/cmmi-process-workflow?view=azure-devops" target="_blank">CMMI</a>).
-
-For example, if you're using a process inherited from the agile template with a custom requirement-level type called defect and 3 task templates defined, using 1-click on a user story or defect will generate three child tasks, one for each defined template.
+The child work items created by this extension are based on the Filter values given by the user in the template.
 
 It's also possible to limit which parent work items apply to each template in one of two ways:
 
@@ -29,45 +27,44 @@ Complex: put a minified (single line) JSON string into the child template's desc
 
 <a href="https://docs.microsoft.com/en-us/azure/devops/boards/backlogs/work-item-template?view=azure-devops&tabs=browser#manage" target="_blank">Manage work item templates</a>
 
-<img src="src/img/screen01.png" alt="Define team templates" />
+<img src="images/screen01.png" alt="Define team templates" />
 
 ### Create / open a work item ###
 
 Find 1-Click Child-Links on toolbar menu
 
-<img src="src/img/screen02.png" alt="1-Click Child-Links on work item form menu"/>
+<img src="images/screen02.png" alt="1-Click Child-Links on work item form menu"/>
 
 ### Done ###
 
 You should now have children associated with the open work item.
 
-<img src="src/img/screen03.png" alt="Done"/>
+<img src="images/screen03.png" alt="Done"/>
+
+## Release notes ##
+
+* v1.0.0
+  * Refactored to TypeScript
+  * Added support for simple dialog to inform user of success or failure
+  * various package updates and bug fixes
+
+* v0.13.1
+  * Added support for tags to be applied to child work items
+
+* v0.13.0
+  * simplified the field replacement logic
+
+* v0.12.1
+  * first Clark EPT release of the extension Forked from https://github.com/figueiredorui/1-click-child-links
 
 ## Usage ##
 
 1. Clone the repository
-1. `npm install` to install required local dependencies
-2. `npm install -g grunt` to install a global copy of grunt (unless it's already installed)
-2. `grunt` to build and package the application
+1. `yarn` to install required local dependencies
+1. `yarn build` to build the production version of the extension (`yarn build:dev` for development version)
+1. `yarn package` to package the extension
+1. Upload the extension to your Azure DevOps organization
 
-### Grunt ###
+## Credits ##
 
-Basic `grunt` tasks are defined:
-
-* `package-dev` - Builds the development version of the vsix package
-* `package-release` - Builds the release version of the vsix package
-* `publish-dev` - Publishes the development version of the extension to the marketplace using `tfx-cli`
-* `publish-release` - Publishes the release version of the extension to the marketplace using `tfx-cli`
-
-Note: To avoid `tfx` prompting for your token when publishing, login in beforehand using `tfx login` and the service uri of ` https://marketplace.visualstudio.com`.
-
-### Debugging your extension ###
-In order to debug the extension using Visual Studio or Browser Developer Tools and speed up the development without redeploying extension each time you change source code, you need to add the `baseUri` property to the `vss-extension.json file` as shown below:
-
-``` json
-{
-
-    "baseUri": "https://localhost:5501",
-
-}
-```
+Clone from https://github.com/cschleiden/vsts-extension-ts-seed-simple
